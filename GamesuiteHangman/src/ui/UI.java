@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 
 import domain.Speler;
 import model.Cirkel;
+import model.LijnStuk;
 import model.Punt;
 import model.Rechthoek;
 
@@ -18,7 +19,7 @@ public class UI {
 	
 	
 	public void load(){
-		String[] shapes = {"Cirkel", "Rechthoek"};
+		String[] shapes = {"Cirkel", "Rechthoek", "LijnStuk"};
 		Object keuze = JOptionPane.showInputDialog(null, "Wat wilt u tekenen?", "Input", JOptionPane.INFORMATION_MESSAGE, null, shapes, null);
 		if (keuze.equals("Cirkel")){
 			cirkel(punt());
@@ -26,9 +27,22 @@ public class UI {
 		}else if (keuze.equals("Rechthoek")){
 			rechthoek(punt());
 
+		}else if (keuze.equals("LijnStuk")){
+			lijnstuk(punt(),punt());
 		}
 		
 	}
+
+	private LijnStuk lijnstuk(Punt beginPunt, Punt eindPunt) {
+		while(true){
+			LijnStuk lijnstuk = new LijnStuk(beginPunt,eindPunt);
+			JOptionPane.showMessageDialog(null, "U heeft een correct lijnstuk aangemaakt: " + lijnstuk.toString());
+			return lijnstuk;
+		}
+		
+	}
+
+
 
 	private Rechthoek rechthoek(Punt p) {
 		while (true){

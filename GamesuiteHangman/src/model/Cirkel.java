@@ -44,7 +44,9 @@ public class Cirkel extends Vorm {
 	@Override
 	public Omhullende getOmhullende() {
 		// TODO Auto-generated method stub
-		return null;
+		Punt p = new Punt(getMiddelpunt().getX()-getRadius(),getMiddelpunt().getY()-getRadius());
+		
+		return new Omhullende(p, 2*getRadius(), 2*getRadius());
 	}
 	
 	

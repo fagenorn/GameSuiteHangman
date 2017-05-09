@@ -25,4 +25,8 @@ public class Punt {
 		}
 		return false;
 	}
+	
+	public String toString(){
+		return "("+getX() +", "+getY()+")";
+	}
 }

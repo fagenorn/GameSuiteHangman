@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 import domain.Speler;
 import model.Cirkel;
 import model.Punt;
+import model.Rechthoek;
 
 public class UI {
 	
@@ -14,9 +15,44 @@ public class UI {
 		speler = s;
 	}
 	
+	
+	
 	public void load(){
-		cirkel(punt());
+		String[] shapes = {"Cirkel", "Rechthoek"};
+		Object keuze = JOptionPane.showInputDialog(null, "Wat wilt u tekenen?", "Input", JOptionPane.INFORMATION_MESSAGE, null, shapes, null);
+		if (keuze.equals("Cirkel")){
+			cirkel(punt());
+			
+		}else if (keuze.equals("Rechthoek")){
+			rechthoek(punt());
+
+		}
+		
 	}
+
+	private Rechthoek rechthoek(Punt p) {
+		while (true){
+			int breedte = 0;
+			int lengte = 0;
+			
+			try{
+				breedte = Integer.parseInt(JOptionPane.showInputDialog("Geef de breedte van de rechthoek."));
+			} catch (NumberFormatException e){
+				JOptionPane.showMessageDialog(null, "Dit is geen correcte breedte."); 
+			}	
+			try{
+				lengte = Integer.parseInt(JOptionPane.showInputDialog("Geef de lengte van de rechthoek."));
+			} catch (NumberFormatException e){
+				JOptionPane.showMessageDialog(null, "Dit is geen correcte lengte."); 
+			}	
+		
+				Rechthoek rechthoek = new Rechthoek(p, breedte, lengte);
+				JOptionPane.showMessageDialog(null,"U heeft een correcte rechthoek aangemaakt: " + rechthoek.toString());
+				return rechthoek;}
+			
+	}
+
+
 
 	private Punt punt() {
 		do{
@@ -37,16 +73,19 @@ public class UI {
 		
 	}
 	
-	private void cirkel(Punt p){
+	private Cirkel cirkel(Punt p){
+		
+		while (true){
 		try{
 			int radius = Integer.parseInt(JOptionPane.showInputDialog("Geef de straal van de cirkel"));
 			Cirkel cirkel = new Cirkel(p,radius);
-			JOptionPane.showMessageDialog(null,cirkel.toString());
+			JOptionPane.showMessageDialog(null,"U heeft een correcte cirkel aangemaakt: " + cirkel.toString());
+			return cirkel;
 		} catch (NumberFormatException e){
-			JOptionPane.showMessageDialog(null, "Dit is geen correte straal."); 
-		
-		
+			JOptionPane.showMessageDialog(null, "Dit is geen correcte straal."); 
+		}		
 	}
 
-}}
+	}
+}
 

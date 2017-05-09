@@ -10,8 +10,8 @@ public class Speler {
 	}
 
 	public void addToScore(int score) {
-		if(score < 0){
-			throw new IllegalArgumentException();
+		if(this.score + score < 0){
+			throw new DomainException("Score mag niet negatief worden !");
 		}
 		this.score += score;
 	}
@@ -40,7 +40,7 @@ public class Speler {
 
 	private void setNaam(String naam) {
 		if (naam == null || naam.trim().isEmpty()) {
-			throw new IllegalArgumentException();
+			throw new DomainException("Naam mag niet leeg zijn !");
 		}
 		this.naam = naam;
 	}
@@ -51,7 +51,7 @@ public class Speler {
 
 	private void setScore(int score) {
 		if (score < 0) {
-			throw new IllegalArgumentException();
+			throw new DomainException("Score mag niet kleiner zijn als 0 !");
 		}
 		this.score = score;
 	}

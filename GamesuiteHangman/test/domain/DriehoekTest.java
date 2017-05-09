@@ -4,6 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import model.Driehoek;
+import model.Punt;
+
 public class DriehoekTest {
 	private Punt punt1 = new Punt(10, 20);
 	private Punt zelfdeAlsPunt1 = new Punt(10, 20);
@@ -65,5 +68,4 @@ public class DriehoekTest {
 		Driehoek drieHoek = new Driehoek(punt1, punt2, punt3);
 		assertFalse(drieHoek.equals(null));
 	}
-
 }

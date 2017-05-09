@@ -13,12 +13,18 @@ public class Cirkel {
 		return radius;
 	}
 	private void setRadius(int radius) {
+		if(radius <= 0){
+			throw new IllegalArgumentException();
+		}
 		this.radius = radius;
 	}
 	public Punt getMiddelpunt() {
 		return middelpunt;
 	}
 	private void setMiddelpunt(Punt middelpunt) {
+		if(middelpunt == null){
+			throw new IllegalArgumentException();
+		}
 		this.middelpunt = middelpunt;
 	}
 	
@@ -27,7 +33,7 @@ public class Cirkel {
 	}
 	
 	public String toString(){
-		return "Cirkel: middelPunt: "+ getMiddelpunt()+" - straal: " +getRadius();
+		return "Cirkel: middelPunt: "+ getMiddelpunt() +" - straal: " +getRadius();
 	}
 	
 	

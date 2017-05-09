@@ -5,6 +5,9 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import model.Punt;
+import model.Rechthoek;
+
 public class RechthoekTest {
 
 	private Punt linkerBovenhoek;

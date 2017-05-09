@@ -5,8 +5,10 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import model.Cirkel;
+import model.Omhullende;
 import model.Punt;
 
+@SuppressWarnings("unused")
 public class CirkelTest {
 
 	@Test
@@ -49,4 +51,12 @@ public class CirkelTest {
 		assertFalse(cirkel.equals(cirkel3));
 	}
 
+	@Test
+	public void OmhullendeIsJuist(){
+		Punt punt = new Punt(2,2);
+		Cirkel cirkel = new Cirkel(punt, 2);
+		Punt p = new Punt(cirkel.getMiddelpunt().getX()-cirkel.getRadius(),cirkel.getMiddelpunt().getY()-cirkel.getRadius());
+		Omhullende om = new Omhullende(p, 2*cirkel.getRadius(), 2*cirkel.getRadius());
+		assertEquals(om, cirkel.getOmhullende());
+	}
 }

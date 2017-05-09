@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import model.Driehoek;
+import model.Omhullende;
 import model.Punt;
 
 public class DriehoekTest {
@@ -67,5 +68,16 @@ public class DriehoekTest {
 	public void equals_moet_false_teruggeven_als_parameter_null(){
 		Driehoek drieHoek = new Driehoek(punt1, punt2, punt3);
 		assertFalse(drieHoek.equals(null));
+	}
+	
+	@Test
+	public void driehoek_moet_juiste_omhullende_teruggeven(){
+		Driehoek driehoek = new Driehoek(punt1, punt2, punt3);
+		int x_min = Math.min(driehoek.getHoekPunt1().getX(), Math.min(driehoek.getHoekPunt2().getX(), driehoek.getHoekPunt3().getX()));
+		int y_min = Math.min(driehoek.getHoekPunt1().getY(), Math.min(driehoek.getHoekPunt2().getY(), driehoek.getHoekPunt3().getY()));
+		int x_max = Math.max(driehoek.getHoekPunt1().getX(), Math.max(driehoek.getHoekPunt2().getX(), driehoek.getHoekPunt3().getX()));
+		int y_max = Math.max(driehoek.getHoekPunt1().getY(), Math.max(driehoek.getHoekPunt2().getY(), driehoek.getHoekPunt3().getY()));
+		Omhullende om = new Omhullende(new Punt(x_min,y_min),x_max-x_min,y_max-y_min);
+		assertEquals(om, driehoek.getOmhullende());
 	}
 }

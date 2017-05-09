@@ -7,6 +7,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 import model.LijnStuk;
+import model.Omhullende;
 import model.Punt;
 
 public class LijnStukTest {
@@ -44,6 +45,15 @@ public class LijnStukTest {
 	public void equals_moet_false_teruggeven_als_parameter_null(){
 		LijnStuk lijnStuk = new LijnStuk(punt1, punt2);
 		assertFalse(lijnStuk.equals(null));
+	}
+	
+	@Test
+	public void omhullende_is_juist(){
+		LijnStuk lijnstuk = new LijnStuk(punt1, punt2);
+		int x = Math.min(lijnstuk.getStartPunt().getX(), lijnstuk.getEindPunt().getX());
+		int y = Math.min(lijnstuk.getStartPunt().getY(), lijnstuk.getEindPunt().getY());
+		Omhullende om = new Omhullende(new Punt(x, y), Math.abs(lijnstuk.getStartPunt().getX() - lijnstuk.getEindPunt().getX()),Math.abs(lijnstuk.getStartPunt().getY() - lijnstuk.getEindPunt().getY()));
+		assertEquals(om, lijnstuk.getOmhullende());
 	}
 }
 	

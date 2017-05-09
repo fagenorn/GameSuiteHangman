@@ -45,8 +45,8 @@ public class CirkelTest {
 		Cirkel cirkel2 = new Cirkel(punt, 3);
 
 		Cirkel cirkel3 = new Cirkel(punt2, 2);
-		assertTrue(cirkel.equals(cirkel2));
-		assertTrue(cirkel.equals(cirkel3));
+		assertFalse(cirkel.equals(cirkel2));
+		assertFalse(cirkel.equals(cirkel3));
 	}
 
 }

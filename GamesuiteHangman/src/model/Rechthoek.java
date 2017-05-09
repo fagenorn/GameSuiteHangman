@@ -2,7 +2,7 @@ package model;
 
 import domain.DomainException;
 
-public class Rechthoek {
+public class Rechthoek extends Vorm{
 	
 	private Punt linkerboven;
 	private int breedte;
@@ -47,6 +47,7 @@ public class Rechthoek {
 		return linkerboven;
 	}
 	
+	@Override
 	public boolean equals(Object o){
 		if(o instanceof Rechthoek){
 			Rechthoek r = (Rechthoek) o;

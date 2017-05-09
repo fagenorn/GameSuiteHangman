@@ -5,11 +5,16 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import model.Omhullende;
+import model.Punt;
+import model.Rechthoek;
+
 public class OmhullendeTest {
 
 	private Punt linkerBovenhoek;
 	private int breedte, hoogte;
 	private Omhullende omhullende;
+	private Rechthoek rechthoek;
 
 	@Before
 	public void setUp() {
@@ -17,6 +22,7 @@ public class OmhullendeTest {
 		breedte = 20;
 		hoogte = 40;
 		omhullende = new Omhullende(linkerBovenhoek,breedte, hoogte);
+		rechthoek = new Rechthoek(linkerBovenhoek,breedte, hoogte);
 	}
 
 	@Test
@@ -82,5 +88,11 @@ public class OmhullendeTest {
 	@Test
 	public void equals_moet_false_teruggeven_als_parameter_null(){
 		assertFalse(omhullende.equals(null));
+	}
+	
+	@Test
+	public void equals_omhullende_moet_dezelfde_breedte_hoogte_als_rechthoek(){
+		Omhullende omhullende_rechthoek = rechthoek.getOmhullende();
+		assertTrue(omhullende.equals(omhullende_rechthoek));
 	}
 }

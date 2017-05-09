@@ -57,7 +57,12 @@ public class Rechthoek extends Vorm{
 	}
 	
 	public String toString(){
-		return "Rechthoek: Positie: "+getLinkerBovenhoek()+" - Breedte: "+getBreedte()+" - Hoogte: "+getHoogte();
+		return "Rechthoek: Positie: "+getLinkerBovenhoek()+" - Breedte: "+getBreedte()+" - Hoogte: "+getHoogte() + " " + getOmhullende();
+	}
+
+	@Override
+	public Omhullende getOmhullende() {
+		return new Omhullende(getLinkerBovenhoek(),getBreedte(),getHoogte());
 	}
 
 }

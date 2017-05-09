@@ -56,7 +56,7 @@ public class Driehoek extends Vorm{
 	}
 	
 	public String toString(){
-		return String.format("Driehoek: hoekpunt1: {0} - hoekpunt2: {1} - hoekpunt3: {2}", getHoekPunt1().toString(), getHoekPunt2().toString(), getHoekPunt3().toString());
+		return String.format("Driehoek: hoekpunt1: {0} - hoekpunt2: {1} - hoekpunt3: {2} - {3}", getHoekPunt1(), getHoekPunt2(), getHoekPunt3(), getOmhullende());
 	}
 
 	public Omhullende getOmhullende() {

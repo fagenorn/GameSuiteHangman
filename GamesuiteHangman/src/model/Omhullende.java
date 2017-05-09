@@ -16,17 +16,14 @@ public class Omhullende {
 	}
 
 	public Punt getLinkerBovenhoek() {
-		// TODO Auto-generated method stub
 		return linkerBovenhoek;
 	}
 
 	public int getHoogte() {
-		// TODO Auto-generated method stub
 		return hoogte;
 	}
 
 	public int getBreedte() {
-		// TODO Auto-generated method stub
 		return breedte;
 	}
 	
@@ -62,5 +59,20 @@ public class Omhullende {
 	public String toString(){
 		return "Omhullende: "+getLinkerBovenhoek()+" - "+getBreedte()+" - "+getHoogte();
 	}
+	
+	public int getMinimumX(){
+		return linkerBovenhoek.getX();
+	}
+	
+	public int getMaximumX(){
+		return linkerBovenhoek.getX() + getBreedte();
+	}
 
+	public int getMinimumY(){
+		return linkerBovenhoek.getY();
+	}
+	
+	public int getMaximumY(){
+		return linkerBovenhoek.getY() + getHoogte();
+	}
 }

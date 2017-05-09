@@ -95,4 +95,16 @@ public class OmhullendeTest {
 		Omhullende omhullende_rechthoek = rechthoek.getOmhullende();
 		assertTrue(omhullende.equals(omhullende_rechthoek));
 	}
+
+	public void Omhullende_Moet_correcte_minimum_maximum_van_x_y_teruggeven(){
+		int min_x = linkerBovenhoek.getX();
+		int min_y = linkerBovenhoek.getY();
+		int max_x = linkerBovenhoek.getX() + breedte;
+		int max_y = linkerBovenhoek.getY() + hoogte;
+		
+		assertEquals(min_x, omhullende.getMinimumX());
+		assertEquals(min_y, omhullende.getMinimumY());
+		assertEquals(max_x, omhullende.getMaximumX());
+		assertEquals(max_y, omhullende.getMaximumY());
+	}
 }

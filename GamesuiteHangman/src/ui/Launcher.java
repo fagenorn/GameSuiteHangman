@@ -11,6 +11,10 @@ public class Launcher {
 		Speler speler = new Speler(naam);
 
 		JOptionPane.showMessageDialog(null, "... zal binnekort spelen", speler.getNaam(), JOptionPane.INFORMATION_MESSAGE);
+		UI ui = new UI(speler);
+		ui.load();
 	}
+	
+	
 
 }

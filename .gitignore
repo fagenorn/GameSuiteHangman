@@ -146,6 +146,7 @@ fabric.properties
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+<<<<<<< HEAD
 ### macOS ###
 *.DS_Store
 .AppleDouble
@@ -172,6 +173,22 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+=======
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+>>>>>>> 719a5b5b8a18a960c33cdf85bd66259f56d7e595
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -194,4 +211,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+<<<<<<< HEAD
 # End of https://www.gitignore.io/api/java,macos,windows,eclipse,intellij
+=======
+# End of https://www.gitignore.io/api/java,linux,windows,eclipse,intellij
+
+>>>>>>> 719a5b5b8a18a960c33cdf85bd66259f56d7e595

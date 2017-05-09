@@ -7,6 +7,14 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
+import model.Cirkel;
+import model.Driehoek;
+import model.LijnStuk;
+import model.Punt;
+import model.Rechthoek;
+import model.Tekening;
+import model.Vorm;
+
 public class TekeningTest {
 	private Vorm gebouw;
 	private Vorm dak;
@@ -29,6 +37,13 @@ public class TekeningTest {
 		schouwNietInTekening = new Rechthoek(new Punt(150, 150), 20,40);
 	}
 
+	@Test
+	public void Vorm_kan_toegevoegd_worden(){
+		Tekening huis1 = new Tekening("huis1");
+		huis1.voegToe(dak);
+		assertTrue(huis1.bevat(dak));
+	}
+	
 	@Test
 	public void Tekening_moet_een_tekening_aanmaken_met_een_geldige_naam_en_0_vormen() {
 		Tekening huis = new Tekening("huis");

@@ -17,7 +17,7 @@ import model.Vorm;
 public class DrawTest {
 
 	@Test
-	public void test() throws InterruptedException {
+	public void test() throws InterruptedException, UIException {
 		Speler speler = new Speler("Mark");
 		Tekening tekening = new Tekening(speler.getNaam());
 		Punt begin =  new Punt(1,1);
@@ -32,7 +32,7 @@ public class DrawTest {
 		}
 	
 	@Test
-	public void tekenRechthoek() throws InterruptedException{
+	public void tekenRechthoek() throws InterruptedException, UIException{
 		Punt linkerBovenhoek = new Punt(200, 200);
 		Speler speler = new Speler("Mark");
 		Tekening tekening = new Tekening(speler.getNaam());
@@ -50,7 +50,7 @@ public class DrawTest {
 	}
 	
 	
-	public void cirkelTest() throws InterruptedException{
+	public void cirkelTest() throws InterruptedException, UIException{
 		Punt punt = new Punt(200,200);
 		Cirkel cirkel = new Cirkel(punt, 100);
 		Speler speler = new Speler("Mark");

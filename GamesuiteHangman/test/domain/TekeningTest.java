@@ -38,12 +38,12 @@ public class TekeningTest {
 		assertEquals(0, huis.getAantalVormen());
 	}
 
-	@Test(expected = IllegalArgumentException.class)
+	@Test(expected = DomainException.class)
 	public void Tekening_moet_exception_gooien_als_naam_null() {
 		new Tekening(null);
 	}
 
-	@Test(expected = IllegalArgumentException.class)
+	@Test(expected = DomainException.class)
 	public void Tekening_moet_exception_gooien_als_naam_leeg() {
 		new Tekening("");
 	}
@@ -106,11 +106,19 @@ public class TekeningTest {
 	@Test(expected = DomainException.class)
 	public void voegToe_gooit_error_wanneer_minimumX_van_omhullende_kleiner_dan_minimumX_van_tekening() {
 		Tekening tekening = new Tekening("tekening");
-		Vorm vorm = new Rechthoek(new Punt(500, 500), 500, 500);
+		Vorm vorm = new Rechthoek(new Punt(-50, 10), 10, 10);
 
 		tekening.voegToe(vorm);
 	}
 
+	@Test(expected = DomainException.class)
+	public void voegToe_gooit_error_wanneer_maximumX_en_Y_van_omhullende_groter_dan_maximumX_en_Y_van_tekening() {
+		Tekening tekening = new Tekening("tekening");
+		Vorm vorm = new Rechthoek(new Punt(10, 500), 500, 500);
+
+		tekening.voegToe(vorm);
+	}
+	
 	public Tekening createHuisMetSchouw() {
 		Tekening huisMetSchouw = new Tekening("huisMetSchouw");
 		huisMetSchouw.voegToe(gebouw);

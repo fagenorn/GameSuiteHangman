@@ -30,36 +30,51 @@ public class Tekening {
 
 	public void voegToe(Vorm vorm) {
 		if (vorm == null || vormen.contains(vorm)) {
-			throw new DomainException("");
+			throw new DomainException("vorm bestaat al");
 		}
 
-		if (vorm.getOmhullende().getMinimumX() >= MIN_X && vorm.getOmhullende().getMaximumX() <= MAX_X
-				&& vorm.getOmhullende().getMinimumY() >= MIN_Y && vorm.getOmhullende().getMaximumY() >= MAX_Y)
+		if (vorm.getOmhullende().getMinimumX() < MIN_X || vorm.getOmhullende().getMaximumX() > MAX_X
+				|| vorm.getOmhullende().getMinimumY() < MIN_Y || vorm.getOmhullende().getMaximumY() > MAX_Y) {
+			throw new DomainException("vorm ligt buiten tekening");
+		}
 
-			vormen.add(vorm);
+		vormen.add(vorm);
 	}
 
 	public Vorm getVorm(int index) {
-		return null;
+		return vormen.get(index);
 	}
 
 	public int getAantalVormen() {
-		return 0;
+		return vormen.size();
 	}
 
 	public void verwijder(Vorm vorm) {
-
+		vormen.remove(vorm);
 	}
 
 	public boolean bevat(Vorm vorm) {
-		return false;
+		return vormen.contains(vorm);
 	}
 
 	public String toString() {
-		return "";
+		return "Tekening MOET NOG AANGEVULD WORDEN!";
 	}
 
 	public boolean equals(Object o) {
+		if (o instanceof Tekening) {
+			Tekening tekening = (Tekening) o;
+			if (this.vormen.size() == tekening.vormen.size()) {
+				for (int i = 0; i < this.vormen.size(); i++) {
+					Vorm vorm1 = this.getVorm(i);
+					Vorm vorm2 = tekening.getVorm(i);
+					if (!tekening.bevat(vorm1) || !this.bevat(vorm2)) {
+						return false;
+					}
+				}
+				return true;
+			}
+		}
 		return false;
 	}
 

@@ -94,6 +94,11 @@ public class TekeningHangMan extends Tekening{
 	
 	@Override
 	public void voegToe(Vorm v){
-		throw new DomainException("");
+		throw new DomainException("Er mogen geen vormen aan Hangman toegevoegd worden.");
+	}
+	
+	@Override
+	public void verwijder(Vorm v){
+		throw new DomainException("Er mogen geen vormen van Hangman verwijderd worden.");
 	}
 }

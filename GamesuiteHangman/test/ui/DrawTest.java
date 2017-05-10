@@ -16,7 +16,7 @@ import model.Vorm;
 
 public class DrawTest {
 
-	
+	@Test
 	public void test() throws InterruptedException {
 		Speler speler = new Speler("Mark");
 		Tekening tekening = new Tekening(speler.getNaam());
@@ -31,7 +31,7 @@ public class DrawTest {
 		TimeUnit.SECONDS.sleep(5);
 		}
 	
-	
+	@Test
 	public void tekenRechthoek() throws InterruptedException{
 		Punt linkerBovenhoek = new Punt(200, 200);
 		Speler speler = new Speler("Mark");
@@ -49,7 +49,7 @@ public class DrawTest {
 		TimeUnit.SECONDS.sleep(5);
 	}
 	
-	@Test
+	
 	public void cirkelTest() throws InterruptedException{
 		Punt punt = new Punt(200,200);
 		Cirkel cirkel = new Cirkel(punt, 100);

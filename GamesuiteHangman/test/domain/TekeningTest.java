@@ -30,6 +30,16 @@ public class TekeningTest {
 		raambalk2 = new LijnStuk(new Punt(250, 220), new Punt(250, 280));
 		schouwNietInTekening = new Rechthoek(new Punt(150, 150), 20, 40);
 	}
+	
+	
+	@Test
+	public void Kan_Vorm_Toevoegen_en_Verwijderen(){
+		Tekening huis1 = new Tekening("huis1");
+		huis1.voegToe(dak);
+		assertTrue(huis1.bevat(dak));
+		huis1.verwijder(dak);
+		assertFalse(huis1.bevat(dak));
+	}
 
 	@Test
 	public void Tekening_moet_een_tekening_aanmaken_met_een_geldige_naam_en_0_vormen() {
@@ -38,12 +48,12 @@ public class TekeningTest {
 		assertEquals(0, huis.getAantalVormen());
 	}
 
-	@Test(expected = DomainException.class)
+	@Test(expected = IllegalArgumentException.class)
 	public void Tekening_moet_exception_gooien_als_naam_null() {
 		new Tekening(null);
 	}
 
-	@Test(expected = DomainException.class)
+	@Test(expected = IllegalArgumentException.class)
 	public void Tekening_moet_exception_gooien_als_naam_leeg() {
 		new Tekening("");
 	}

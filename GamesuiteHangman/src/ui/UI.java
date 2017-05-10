@@ -41,9 +41,15 @@ public class UI {
 				}
 				break;
 			case 2:
-				GameMainWindow view = new GameMainWindow(speler.getNaam(), tekening);
-				view.setVisible(true);
-				view.teken();
+				GameMainWindow view;
+				try {
+					view = new GameMainWindow(speler.getNaam(), tekening);
+					view.setVisible(true);
+					view.teken();
+				} catch (UIException e) {
+					
+				}
+				
 				break;
 			}
 		}

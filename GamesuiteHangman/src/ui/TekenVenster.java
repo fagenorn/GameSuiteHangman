@@ -15,13 +15,14 @@ public class TekenVenster extends Canvas {
 	
 	private Tekening tekening;
 	
-	public TekenVenster(Tekening tekening) {
+	public TekenVenster(Tekening tekening) throws UIException {
 		setTekening(tekening);
 		this.setPreferredSize(new Dimension(400,400));
 		
 	}
 
-	private void setTekening(Tekening tekening) {
+	private void setTekening(Tekening tekening) throws UIException {
+		if (tekening == null) throw new UIException("Tekening mag niet null zijn.");
 		this.tekening = tekening;
 	}
 	

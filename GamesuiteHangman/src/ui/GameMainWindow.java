@@ -17,7 +17,7 @@ public class GameMainWindow extends JFrame {
 	private TekenVenster tekenvenster;
 	
 	
-	public GameMainWindow(String naam, Tekening tekening) throws HeadlessException {
+	public GameMainWindow(String naam, Tekening tekening) throws UIException {
 		super(naam);
 		TekenVenster tekenvenster = new TekenVenster(tekening);
 		setTekenvenster(tekenvenster);

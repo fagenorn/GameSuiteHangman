@@ -45,6 +45,9 @@ public class UI {
 				break;
 			}
 		}
+		GameMainWindow view = new GameMainWindow(speler.getNaam(), tekening);
+		view.setVisible(true);
+		view.teken();
 		
 	}
 

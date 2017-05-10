@@ -35,7 +35,10 @@ public class Tekening {
 
 		if (vorm.getOmhullende().getMinimumX() >= MIN_X && vorm.getOmhullende().getMaximumX() <= MAX_X
 				&& vorm.getOmhullende().getMinimumY() >= MIN_Y && vorm.getOmhullende().getMaximumY() >= MAX_Y)
-
+		{
+			throw new DomainException("");
+		}
+		
 			vormen.add(vorm);
 	}
 

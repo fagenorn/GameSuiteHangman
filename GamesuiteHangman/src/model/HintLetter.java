@@ -1,7 +1,5 @@
 package model;
 
-import domain.DomainException;
-
 public class HintLetter {
 
 	private boolean geraden;
@@ -12,9 +10,6 @@ public class HintLetter {
 	}
 
 	public void setLetter(char letter) {
-		if (letter == ' ') {
-			throw new DomainException("Letter mag geen spatie zijn");
-		}
 		this.letter = letter;
 	}
 
@@ -23,7 +18,7 @@ public class HintLetter {
 	}
 
 	public boolean raad(char c) {
-		if (geraden) {
+		if (isGeraden()) {
 			return false;
 		}
 		geraden = Character.toLowerCase(letter) == Character.toLowerCase(c);

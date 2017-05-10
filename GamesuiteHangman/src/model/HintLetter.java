@@ -12,7 +12,7 @@ public class HintLetter {
 	}
 
 	public void setLetter(char letter) {
-		if(letter == ' '){
+		if (letter == ' ') {
 			throw new DomainException("Letter mag geen spatie zijn");
 		}
 		this.letter = letter;
@@ -23,7 +23,10 @@ public class HintLetter {
 	}
 
 	public boolean raad(char c) {
-		geraden = letter == c;
+		if (geraden) {
+			return false;
+		}
+		geraden = Character.toLowerCase(letter) == Character.toLowerCase(c);
 		return isGeraden();
 
 	}
@@ -33,11 +36,11 @@ public class HintLetter {
 	}
 
 	public char getLetter() {
-		return geraden ? toChar() : '_';
+		return letter;
 	}
-	
-	public char toChar(){
-		return letter;	
+
+	public char toChar() {
+		return geraden ? getLetter() : '_';
 	}
 
 }

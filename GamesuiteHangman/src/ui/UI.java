@@ -41,10 +41,19 @@ public class UI {
 				}
 				break;
 			case 2:
-				JOptionPane.showMessageDialog(null, tekening.toString());
+				GameMainWindow view;
+				try {
+					view = new GameMainWindow(speler.getNaam(), tekening);
+					view.setVisible(true);
+					view.teken();
+				} catch (UIException e) {
+					
+				}
+				
 				break;
 			}
 		}
+		
 		
 	}
 

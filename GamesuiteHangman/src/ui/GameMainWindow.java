@@ -19,7 +19,10 @@ public class GameMainWindow extends JFrame {
 	private TekenVenster tekenvenster;
 	
 	public void teken(){
-		
+		this.add(tekenvenster);
+		this.setTitle(naam);
+		tekenvenster.teken();
+		this.setSize(500, 500);
 	}
 	
 

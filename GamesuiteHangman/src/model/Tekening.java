@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import domain.DomainException;
 
@@ -11,6 +12,10 @@ public class Tekening {
 	private static final int MAX_X = 399;
 	private static final int MAX_Y = 399;
 	private ArrayList<Vorm> vormen = new ArrayList<>();
+
+	public List<Vorm> getVormen() {
+		return vormen;
+	}
 
 	public String getNaam() {
 		return naam;

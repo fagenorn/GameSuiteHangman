@@ -22,24 +22,26 @@ public class UI {
 	
 	public void load(){
 		tekening = new Tekening(JOptionPane.showInputDialog("Geef de naam van je tekening:"));
-		int option = Integer.parseInt(JOptionPane.showInputDialog(null, "Wat wil je doen:\n\n1.Vorm maken\n2.Tekening tonen\n\n0.Stoppen"));
+		int option = 1;
 		while (option != 0){
+			option = Integer.parseInt(JOptionPane.showInputDialog(null, "Wat wil je doen:\n\n1.Vorm maken\n2.Tekening tonen\n\n0.Stoppen"));
+		
 			switch (option){
 			case 1:	
 				String[] shapes = {"Cirkel", "Rechthoek", "LijnStuk"};
 				Object keuze = JOptionPane.showInputDialog(null, "Wat wilt u tekenen?", "Input", JOptionPane.INFORMATION_MESSAGE, null, shapes, null);
 				if (keuze.equals("Cirkel")){
-					cirkel(punt());
+					tekening.voegToe(cirkel(punt()));
 			
 				}else if (keuze.equals("Rechthoek")){
-					rechthoek(punt());
+					tekening.voegToe(rechthoek(punt()));
 
 				}else if (keuze.equals("LijnStuk")){
-					lijnstuk(punt(),punt());
+					tekening.voegToe(lijnstuk(punt(),punt()));
 				}
 				break;
 			case 2:
-				tekening.toString();
+				JOptionPane.showMessageDialog(null, tekening.toString());
 				break;
 			}
 		}

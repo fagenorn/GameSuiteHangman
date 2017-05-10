@@ -30,16 +30,15 @@ public class Tekening {
 
 	public void voegToe(Vorm vorm) {
 		if (vorm == null || vormen.contains(vorm)) {
-			throw new DomainException("");
+			throw new DomainException("vorm bestaat al");
 		}
 
-		if (vorm.getOmhullende().getMinimumX() >= MIN_X && vorm.getOmhullende().getMaximumX() <= MAX_X
-				&& vorm.getOmhullende().getMinimumY() >= MIN_Y && vorm.getOmhullende().getMaximumY() >= MAX_Y)
-		{
-			throw new DomainException("");
+		if (vorm.getOmhullende().getMinimumX() < MIN_X || vorm.getOmhullende().getMaximumX() > MAX_X
+				|| vorm.getOmhullende().getMinimumY() < MIN_Y || vorm.getOmhullende().getMaximumY() > MAX_Y) {
+			throw new DomainException("vorm ligt buiten tekening");
 		}
-		
-			vormen.add(vorm);
+
+		vormen.add(vorm);
 	}
 
 	public Vorm getVorm(int index) {

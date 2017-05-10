@@ -7,10 +7,12 @@ import model.Cirkel;
 import model.LijnStuk;
 import model.Punt;
 import model.Rechthoek;
+import model.Tekening;
 
 public class UI {
 	
 	private final Speler speler;
+	private Tekening tekening;
 	
 	public UI(Speler s){
 		speler = s;
@@ -19,16 +21,27 @@ public class UI {
 	
 	
 	public void load(){
-		String[] shapes = {"Cirkel", "Rechthoek", "LijnStuk"};
-		Object keuze = JOptionPane.showInputDialog(null, "Wat wilt u tekenen?", "Input", JOptionPane.INFORMATION_MESSAGE, null, shapes, null);
-		if (keuze.equals("Cirkel")){
-			cirkel(punt());
+		tekening = new Tekening(JOptionPane.showInputDialog("Geef de naam van je tekening:"));
+		int option = Integer.parseInt(JOptionPane.showInputDialog(null, "Wat wil je doen:\n\n1.Vorm maken\n2.Tekening tonen\n\n0.Stoppen"));
+		while (option != 0){
+			switch (option){
+			case 1:	
+				String[] shapes = {"Cirkel", "Rechthoek", "LijnStuk"};
+				Object keuze = JOptionPane.showInputDialog(null, "Wat wilt u tekenen?", "Input", JOptionPane.INFORMATION_MESSAGE, null, shapes, null);
+				if (keuze.equals("Cirkel")){
+					cirkel(punt());
 			
-		}else if (keuze.equals("Rechthoek")){
-			rechthoek(punt());
+				}else if (keuze.equals("Rechthoek")){
+					rechthoek(punt());
 
-		}else if (keuze.equals("LijnStuk")){
-			lijnstuk(punt(),punt());
+				}else if (keuze.equals("LijnStuk")){
+					lijnstuk(punt(),punt());
+				}
+				break;
+			case 2:
+				tekening.toString();
+				break;
+			}
 		}
 		
 	}

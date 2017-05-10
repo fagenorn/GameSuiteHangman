@@ -30,6 +30,13 @@ public class TekeningTest {
 		raambalk2 = new LijnStuk(new Punt(250, 220), new Punt(250, 280));
 		schouwNietInTekening = new Rechthoek(new Punt(150, 150), 20, 40);
 	}
+	
+	@Test
+	public void Kan_Vorm_Toevoegen(){
+		Tekening huis1 = new Tekening("huis1");
+		huis1.voegToe(dak);
+		assertTrue(huis1.bevat(dak));
+	}
 
 	@Test
 	public void Tekening_moet_een_tekening_aanmaken_met_een_geldige_naam_en_0_vormen() {

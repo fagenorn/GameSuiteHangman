@@ -1,5 +1,7 @@
 package model;
 
+import java.awt.Graphics;
+
 import domain.DomainException;
 
 public class Rechthoek extends Vorm{
@@ -63,6 +65,12 @@ public class Rechthoek extends Vorm{
 	@Override
 	public Omhullende getOmhullende() {
 		return new Omhullende(getLinkerBovenhoek(),getBreedte(),getHoogte());
+	}
+
+	@Override
+	public void teken(Graphics g) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

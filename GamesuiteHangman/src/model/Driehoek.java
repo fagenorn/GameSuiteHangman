@@ -1,5 +1,7 @@
 package model;
 
+import java.awt.Graphics;
+
 import domain.DomainException;
 
 public class Driehoek extends Vorm{
@@ -65,5 +67,11 @@ public class Driehoek extends Vorm{
 		int x_max = Math.max(getHoekPunt1().getX(), Math.max(getHoekPunt2().getX(), getHoekPunt3().getX()));
 		int y_max = Math.max(getHoekPunt1().getY(), Math.max(getHoekPunt2().getY(), getHoekPunt3().getY()));
 		return new Omhullende(new Punt(x_min,y_min),x_max-x_min,y_max-y_min);
+	}
+
+	@Override
+	public void teken(Graphics g) {
+		// TODO Auto-generated method stub
+		
 	}
 }

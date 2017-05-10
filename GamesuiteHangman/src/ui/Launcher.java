@@ -23,7 +23,7 @@ public class Launcher {
 				"Keuze spel", JOptionPane.QUESTION_MESSAGE, null, choices, choices[1]);
 		switch (choice) {
 		case "HangMan":
-			HangManUi hangman = new HangManUi(speler);
+			HangManUi hangman = new HangManUi(speler, lijst);
 			hangman.play();
 			break;
 		default:

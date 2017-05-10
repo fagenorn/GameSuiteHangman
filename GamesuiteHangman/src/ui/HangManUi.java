@@ -4,11 +4,13 @@ import javax.swing.JOptionPane;
 
 import domain.Speler;
 import model.HintWoord;
+import model.WoordenLijst;
 
 public class HangManUi {
 	private static String spelNaam = "HangMan";
 	private String titel;
 	private Speler speler;
+	private WoordenLijst lijst;
 
 	public Speler getSpeler() {
 		return speler;
@@ -19,12 +21,13 @@ public class HangManUi {
 		titel = "spelNaam - " + getSpeler().getNaam();
 	}
 
-	public HangManUi(Speler speler) {
+	public HangManUi(Speler speler, WoordenLijst lijst) {
 		setSpeler(speler);
+		this.lijst = lijst;
 	}
 
 	public void play() {
-		String woord = "woord";
+		String woord = lijst.getRandomWoord();
 		HintWoord hintWoord = new HintWoord(woord);
 		while (!hintWoord.isGeraden()) {
 			String gok = JOptionPane.showInputDialog(null, "Gok een letter: \n" + hintWoord.toString(), titel, JOptionPane.DEFAULT_OPTION);

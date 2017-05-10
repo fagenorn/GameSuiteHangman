@@ -31,11 +31,14 @@ public class TekeningTest {
 		schouwNietInTekening = new Rechthoek(new Punt(150, 150), 20, 40);
 	}
 	
+	
 	@Test
-	public void Kan_Vorm_Toevoegen(){
+	public void Kan_Vorm_Toevoegen_en_Verwijderen(){
 		Tekening huis1 = new Tekening("huis1");
 		huis1.voegToe(dak);
 		assertTrue(huis1.bevat(dak));
+		huis1.verwijder(dak);
+		assertFalse(huis1.bevat(dak));
 	}
 
 	@Test

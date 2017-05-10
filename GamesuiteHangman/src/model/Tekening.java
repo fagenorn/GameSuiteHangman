@@ -41,27 +41,28 @@ public class Tekening {
 		vormen.add(vorm);
 	}
 
-	public Vorm getVorm(int index) {
-		return null;
+	public Vorm getVorm(int index){
+		return vormen.get(index);
 	}
-
-	public int getAantalVormen() {
-		return 0;
+	public int getAantalVormen(){
+		return vormen.size();
 	}
-
-	public void verwijder(Vorm vorm) {
-
+	public void verwijder(Vorm vorm){
+		vormen.remove(vorm);
 	}
-
-	public boolean bevat(Vorm vorm) {
-		return false;
+	public boolean bevat(Vorm vorm){
+		return vormen.contains(vorm) ? true : false;
 	}
-
-	public String toString() {
-		return "";
+	public String toString(){
+		return "Tekening MOET NOG AANGEVULD WORDEN!";
 	}
-
-	public boolean equals(Object o) {
+	public boolean equals(Object o){
+		if (o instanceof Tekening){
+			Tekening tekening = (Tekening) o;
+			if (this.naam == tekening.getNaam()){
+				return true;
+			}
+		}
 		return false;
 	}
 

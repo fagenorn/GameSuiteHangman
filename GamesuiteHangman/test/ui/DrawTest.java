@@ -7,14 +7,16 @@ import java.util.concurrent.TimeUnit;
 import org.junit.Test;
 
 import domain.Speler;
+import model.Cirkel;
 import model.LijnStuk;
 import model.Punt;
+import model.Rechthoek;
 import model.Tekening;
 import model.Vorm;
 
 public class DrawTest {
 
-	@Test
+	
 	public void test() throws InterruptedException {
 		Speler speler = new Speler("Mark");
 		Tekening tekening = new Tekening(speler.getNaam());
@@ -28,5 +30,40 @@ public class DrawTest {
 		
 		TimeUnit.SECONDS.sleep(5);
 		}
+	
+	
+	public void tekenRechthoek() throws InterruptedException{
+		Punt linkerBovenhoek = new Punt(200, 200);
+		Speler speler = new Speler("Mark");
+		Tekening tekening = new Tekening(speler.getNaam());
+		int breedte = 20;
+		int hoogte = 40;
+		Rechthoek rechthoek = new Rechthoek(linkerBovenhoek,breedte, hoogte);
+		
+		tekening.voegToe(rechthoek);
+		
+		GameMainWindow view = new GameMainWindow(speler.getNaam(), tekening);
+		view.setVisible(true);
+		view.teken();
+		
+		TimeUnit.SECONDS.sleep(5);
+	}
+	
+	@Test
+	public void cirkelTest() throws InterruptedException{
+		Punt punt = new Punt(200,200);
+		Cirkel cirkel = new Cirkel(punt, 100);
+		Speler speler = new Speler("Mark");
+		Tekening tekening = new Tekening(speler.getNaam());
+		tekening.voegToe(cirkel);
+		
+		GameMainWindow view = new GameMainWindow(speler.getNaam(), tekening);
+		view.setVisible(true);
+		view.teken();
+		
+		TimeUnit.SECONDS.sleep(5);
+		
+		
+	}
 
 }

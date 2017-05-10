@@ -69,8 +69,8 @@ public class Rechthoek extends Vorm{
 
 	@Override
 	public void teken(Graphics g) {
-		// TODO Auto-generated method stub
-		
+
+		g.drawRect(getLinkerBovenhoek().getX(),getLinkerBovenhoek().getY(), getBreedte(), getHoogte());	
 	}
 
 }

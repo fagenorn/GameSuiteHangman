@@ -41,25 +41,37 @@ public class Tekening {
 		vormen.add(vorm);
 	}
 
-	public Vorm getVorm(int index){
+	public Vorm getVorm(int index) {
 		return vormen.get(index);
 	}
-	public int getAantalVormen(){
+
+	public int getAantalVormen() {
 		return vormen.size();
 	}
-	public void verwijder(Vorm vorm){
+
+	public void verwijder(Vorm vorm) {
 		vormen.remove(vorm);
 	}
-	public boolean bevat(Vorm vorm){
-		return vormen.contains(vorm) ? true : false;
+
+	public boolean bevat(Vorm vorm) {
+		return vormen.contains(vorm);
 	}
-	public String toString(){
+
+	public String toString() {
 		return "Tekening MOET NOG AANGEVULD WORDEN!";
 	}
-	public boolean equals(Object o){
-		if (o instanceof Tekening){
+
+	public boolean equals(Object o) {
+		if (o instanceof Tekening) {
 			Tekening tekening = (Tekening) o;
-			if (this.naam == tekening.getNaam()){
+			if (this.vormen.size() == tekening.vormen.size()) {
+				for (int i = 0; i < this.vormen.size(); i++) {
+					Vorm vorm1 = this.getVorm(i);
+					Vorm vorm2 = tekening.getVorm(i);
+					if (!tekening.bevat(vorm1) || !this.bevat(vorm2)) {
+						return false;
+					}
+				}
 				return true;
 			}
 		}

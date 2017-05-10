@@ -34,7 +34,39 @@ public class WoordenLijstTest {
 		woordenlijstMetGeldigeWoorden.voegToe(geldigeWoorden.get(2));
 		
 	}
+	@Test
+	public void RandomTest_lijst_is_leeg_geeft_null_terug(){
+		WoordenLijst woorden = new WoordenLijst();
+		assertEquals(null,woorden.getRandomWoord() );
+	}
+	
+	@Test
+	public void RandomTest_lijst_heeft_1waarde_geeft_die_terug(){
+		WoordenLijst woorden = new WoordenLijst();
+		woorden.voegToe("patat");
+		assertEquals("patat",woorden.getRandomWoord() );
+	}
 
+	@Test
+	public void RandomTest_lijst_heeft_meerdere_waardes_geeft_random_terug_no_Exception(){
+		WoordenLijst woorden = new WoordenLijst();
+		String Randomness = "";
+		woorden.voegToe("patat0");
+		woorden.voegToe("patat1");
+		woorden.voegToe("patat2");
+		woorden.voegToe("patat3");
+		woorden.voegToe("patat4");
+		woorden.voegToe("patat5");
+		woorden.voegToe("patat6");
+		woorden.voegToe("patat7");
+		woorden.voegToe("patat8");
+		woorden.voegToe("patat9");
+		
+		for(int i = 0;i < 1000;i++){
+			Randomness +=woorden.getRandomWoord();
+		}
+	}
+	
 	@Test
 	public void WoordenLijst_moet_een_Woordenlijst_maken_zonder_woorden() {
 		WoordenLijst woordenlijstLeeg = new WoordenLijst();

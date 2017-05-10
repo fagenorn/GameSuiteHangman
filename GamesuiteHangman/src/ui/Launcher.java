@@ -18,11 +18,19 @@ public class Launcher {
 		
 		
 
-		JOptionPane.showMessageDialog(null, speler.getNaam() + " zal binnekort spelen", speler.getNaam(), JOptionPane.INFORMATION_MESSAGE);
-		UI ui = new UI(speler);
-		ui.load();
+		String[] choices = { "Pictionary", "HangMan" };
+		String choice = (String) JOptionPane.showInputDialog(null, "Welke spel wil je spelen?",
+				"Keuze spel", JOptionPane.QUESTION_MESSAGE, null, choices, choices[1]);
+		switch (choice) {
+		case "HangMan":
+			HangManUi hangman = new HangManUi(speler);
+			hangman.play();
+			break;
+		default:
+			UI ui = new UI(speler);
+			ui.load();
+			break;
+		}
 	}
-	
-	
 
 }

@@ -1,5 +1,7 @@
 package model;
 
+import java.awt.Graphics;
+
 import domain.DomainException;
 
 public class LijnStuk extends Vorm{
@@ -53,6 +55,12 @@ public class LijnStuk extends Vorm{
 		int x = Math.min(getStartPunt().getX(), getEindPunt().getX());
 		int y = Math.min(getStartPunt().getY(), getEindPunt().getY());
 		return new Omhullende(new Punt(x, y), Math.abs(getStartPunt().getX() - getEindPunt().getX()),Math.abs(getStartPunt().getY() - getEindPunt().getY()));
+	}
+
+	@Override
+	public void teken(Graphics g) {
+		g.drawLine(getStartPunt().getX(),getStartPunt().getY(),getEindPunt().getX(),getEindPunt().getY());
+		
 	}
 
 }

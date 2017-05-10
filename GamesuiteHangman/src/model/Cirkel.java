@@ -1,4 +1,6 @@
 package model;
+import java.awt.Graphics;
+
 import model.Vorm;
 
 public class Cirkel extends Vorm {
@@ -47,6 +49,11 @@ public class Cirkel extends Vorm {
 		Punt p = new Punt(getMiddelpunt().getX()-getRadius(),getMiddelpunt().getY()-getRadius());
 		
 		return new Omhullende(p, 2*getRadius(), 2*getRadius());
+	}
+	@Override
+	public void teken(Graphics g) {
+		g.drawOval(getMiddelpunt().getX(), getMiddelpunt().getY(), getRadius(), getRadius());
+		
 	}
 	
 	

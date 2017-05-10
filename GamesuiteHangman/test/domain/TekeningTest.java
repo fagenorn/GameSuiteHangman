@@ -48,12 +48,12 @@ public class TekeningTest {
 		assertEquals(0, huis.getAantalVormen());
 	}
 
-	@Test(expected = DomainException.class)
+	@Test(expected = IllegalArgumentException.class)
 	public void Tekening_moet_exception_gooien_als_naam_null() {
 		new Tekening(null);
 	}
 
-	@Test(expected = DomainException.class)
+	@Test(expected = IllegalArgumentException.class)
 	public void Tekening_moet_exception_gooien_als_naam_leeg() {
 		new Tekening("");
 	}

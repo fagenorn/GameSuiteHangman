@@ -56,9 +56,12 @@ public class Tekening {
 	public boolean bevat(Vorm vorm) {
 		return vormen.contains(vorm);
 	}
-
-	public String toString() {
-		return "Tekening MOET NOG AANGEVULD WORDEN!";
+	public String toString(){
+		String result = "Tekening met naam " + getNaam() + " bestaat uit " + getAantalVormen() + "vormen:";
+		for (Vorm vorm : vormen){
+			result += "\n" + vorm.toString();
+		}
+		return result;
 	}
 
 	public boolean equals(Object o) {

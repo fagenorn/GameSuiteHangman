@@ -10,8 +10,8 @@ public class HintLetterTest {
 
 	private HintLetter letter = new HintLetter('a');
 
-	@Test(expected=DomainException.class)
-	public void letter_aanmaken_die_spatie_is_gooit_exception() {
+	@Test
+	public void letter_aanmaken_die_spatie_is_gooit_geen_exception() {
 		HintLetter letter = new HintLetter(' ');
 	}
 

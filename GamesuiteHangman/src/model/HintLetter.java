@@ -1,5 +1,7 @@
 package model;
 
+import domain.DomainException;
+
 public class HintLetter {
 
 	private boolean geraden;
@@ -10,6 +12,9 @@ public class HintLetter {
 	}
 
 	public void setLetter(char letter) {
+		if (letter == ' '){
+			setGeraden(true);
+		}
 		this.letter = letter;
 	}
 

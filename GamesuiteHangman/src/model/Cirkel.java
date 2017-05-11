@@ -52,7 +52,7 @@ public class Cirkel extends Vorm {
 	}
 	@Override
 	public void teken(Graphics g) {
-		g.drawOval(getMiddelpunt().getX(), getMiddelpunt().getY(), getRadius(), getRadius());
+		g.drawOval(getMiddelpunt().getX()-getRadius(), getMiddelpunt().getY()-getRadius(), 2*getRadius(), 2*getRadius());
 		
 	}
 	

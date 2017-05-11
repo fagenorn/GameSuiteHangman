@@ -12,6 +12,7 @@ import model.LijnStuk;
 import model.Punt;
 import model.Rechthoek;
 import model.Tekening;
+import model.TekeningHangMan;
 import model.Vorm;
 
 public class DrawTest {
@@ -62,8 +63,19 @@ public class DrawTest {
 		view.teken();
 		
 		TimeUnit.SECONDS.sleep(5);
-		
-		
 	}
+	
+	@Test
+	public void hangman() throws InterruptedException, UIException{
+		Punt punt = new Punt(200,200);
+		TekeningHangMan tekening = new TekeningHangMan("Hangman");
+		
+		GameMainWindow view = new GameMainWindow("Lol", tekening);
+		view.setVisible(true);
+		view.teken();
+		
+		TimeUnit.SECONDS.sleep(5);
+	}
+
 
 }

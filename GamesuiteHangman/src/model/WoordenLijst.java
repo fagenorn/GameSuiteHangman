@@ -18,7 +18,7 @@ public class WoordenLijst {
 	
 	public void voegToe(String woord){
 		if(woord == null || woord.trim().isEmpty() || woorden.contains(woord)){
-			throw new DomainException("Woord mag niet leeg zijn !");
+			throw new DomainException("Woord mag niet leeg zijn !" + woord);
 		}
 		woorden.add(woord);
 	}

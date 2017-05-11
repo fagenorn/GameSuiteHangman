@@ -157,7 +157,6 @@ bus
 buurman
 buurvrouw
 cadeau
-cadeau
 casten
 catgut
 celsius
@@ -181,7 +180,6 @@ conclaaf
 conditie
 controle
 convex
-convocaat
 convocaat
 cool
 correct
@@ -248,7 +246,6 @@ eenheid
 eenzaam
 eerste
 eeuw
-efemeer
 efemeer
 effect
 ei
@@ -621,7 +618,6 @@ mensen
 mes
 met
 meubel
-meubel
 mevrouw
 middel
 midden
@@ -987,7 +983,6 @@ uitnodigen
 uitvinden
 uitzoeken
 ureter
-ureter
 uur
 vaak
 vaarwel
@@ -1085,7 +1080,6 @@ vork
 vorm
 vos
 vouwen
-voyant
 voyant
 vraag
 vragen

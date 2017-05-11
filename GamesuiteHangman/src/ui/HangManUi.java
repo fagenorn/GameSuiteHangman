@@ -18,7 +18,7 @@ public class HangManUi {
 
 	private void setSpeler(Speler speler) {
 		this.speler = speler;
-		titel = "spelNaam - " + getSpeler().getNaam();
+		titel = spelNaam + " - " + getSpeler().getNaam();
 	}
 
 	public HangManUi(Speler speler, WoordenLijst lijst) {

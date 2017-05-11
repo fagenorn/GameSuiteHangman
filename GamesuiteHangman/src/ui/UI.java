@@ -28,7 +28,7 @@ public class UI {
 		
 			switch (option){
 			case 1:	
-				String[] shapes = {"Cirkel", "Rechthoek", "LijnStuk"};
+				String[] shapes = {"Cirkel", "Rechthoek", "Lijnstuk","Driehoek"};
 				Object keuze = JOptionPane.showInputDialog(null, "Wat wilt u tekenen?", "Input", JOptionPane.INFORMATION_MESSAGE, null, shapes, null);
 				if (keuze.equals("Cirkel")){
 					tekening.voegToe(cirkel(punt()));
@@ -36,12 +36,15 @@ public class UI {
 				}else if (keuze.equals("Rechthoek")){
 					tekening.voegToe(rechthoek(punt()));
 
-				}else if (keuze.equals("LijnStuk")){
+				}else if (keuze.equals("Lijnstuk")){
+					tekening.voegToe(lijnstuk(punt(),punt()));
+				}else if (keuze.equals("Driehoek")){
 					tekening.voegToe(lijnstuk(punt(),punt()));
 				}
 				break;
 			case 2:
 				GameMainWindow view;
+				tekening.zetZichtbaarheid(true);
 				try {
 					view = new GameMainWindow(speler.getNaam(), tekening);
 					view.setVisible(true);

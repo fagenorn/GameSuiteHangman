@@ -4,10 +4,12 @@ import javax.swing.JOptionPane;
 
 import domain.Speler;
 import model.Cirkel;
+import model.Driehoek;
 import model.LijnStuk;
 import model.Punt;
 import model.Rechthoek;
 import model.Tekening;
+import model.Vorm;
 
 public class UI {
 	
@@ -28,7 +30,7 @@ public class UI {
 		
 			switch (option){
 			case 1:	
-				String[] shapes = {"Cirkel", "Rechthoek", "LijnStuk"};
+				String[] shapes = {"Cirkel", "Rechthoek", "Lijnstuk","Driehoek"};
 				Object keuze = JOptionPane.showInputDialog(null, "Wat wilt u tekenen?", "Input", JOptionPane.INFORMATION_MESSAGE, null, shapes, null);
 				if (keuze.equals("Cirkel")){
 					tekening.voegToe(cirkel(punt()));
@@ -36,12 +38,15 @@ public class UI {
 				}else if (keuze.equals("Rechthoek")){
 					tekening.voegToe(rechthoek(punt()));
 
-				}else if (keuze.equals("LijnStuk")){
+				}else if (keuze.equals("Lijnstuk")){
 					tekening.voegToe(lijnstuk(punt(),punt()));
+				}else if (keuze.equals("Driehoek")){
+					tekening.voegToe(driehoek(punt(),punt(),punt()));
 				}
 				break;
 			case 2:
 				GameMainWindow view;
+				tekening.zetZichtbaarheid(true);
 				try {
 					view = new GameMainWindow(speler.getNaam(), tekening);
 					view.setVisible(true);
@@ -56,6 +61,12 @@ public class UI {
 		
 		
 	}
+
+	private Vorm driehoek(Punt punt, Punt punt2, Punt punt3) {
+		return new Driehoek(punt, punt2, punt3);
+	}
+
+
 
 	private LijnStuk lijnstuk(Punt beginPunt, Punt eindPunt) {
 		while(true){

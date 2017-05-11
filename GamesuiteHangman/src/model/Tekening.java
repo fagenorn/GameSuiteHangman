@@ -86,4 +86,8 @@ public class Tekening {
 		return false;
 	}
 
+	public void zetZichtbaarheid(boolean b) {
+		vormen.forEach((v) -> v.setZichtbaarheid(b));
+	}
+
 }

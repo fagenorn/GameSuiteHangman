@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import domain.Speler;
 import model.Cirkel;
+import model.Driehoek;
 import model.LijnStuk;
 import model.Punt;
 import model.Rechthoek;
@@ -17,7 +18,7 @@ import model.Vorm;
 
 public class DrawTest {
 
-	@Test
+	
 	public void test() throws InterruptedException, UIException {
 		Speler speler = new Speler("Mark");
 		Tekening tekening = new Tekening(speler.getNaam());
@@ -32,7 +33,7 @@ public class DrawTest {
 		TimeUnit.SECONDS.sleep(5);
 		}
 	
-	@Test
+	
 	public void tekenRechthoek() throws InterruptedException, UIException{
 		Punt linkerBovenhoek = new Punt(200, 200);
 		Speler speler = new Speler("Mark");
@@ -66,6 +67,24 @@ public class DrawTest {
 	}
 	
 	@Test
+	public void driehoekTest() throws InterruptedException, UIException{
+		Punt punt = new Punt(220,200);
+		Punt punt2 = new Punt(100,100);
+		Punt punt3 = new Punt(300,300);
+		Driehoek driehoek = new Driehoek(punt, punt2, punt3);
+		Speler speler = new Speler("Mark");
+		Tekening tekening = new Tekening(speler.getNaam());
+		tekening.voegToe(driehoek);
+		
+		GameMainWindow view = new GameMainWindow(speler.getNaam(), tekening);
+		view.setVisible(true);
+		view.teken();
+		
+		TimeUnit.SECONDS.sleep(5);
+	}
+	
+	
+	
 	public void hangman() throws InterruptedException, UIException{
 		Punt punt = new Punt(200,200);
 		TekeningHangMan tekening = new TekeningHangMan("Hangman");

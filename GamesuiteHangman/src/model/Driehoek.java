@@ -71,7 +71,9 @@ public class Driehoek extends Vorm{
 
 	@Override
 	public void teken(Graphics g) {
-		// TODO Auto-generated method stub
+		new LijnStuk(hoekPunt1, hoekPunt2).teken(g);
+		new LijnStuk(hoekPunt2, hoekPunt3).teken(g);
+		new LijnStuk(hoekPunt1, hoekPunt3).teken(g);
 		
 	}
 }

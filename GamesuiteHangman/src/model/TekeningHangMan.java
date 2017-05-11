@@ -58,7 +58,7 @@ public class TekeningHangMan extends Tekening{
 		super.voegToe(armRechts);
 		super.voegToe(handLinks);
 		super.voegToe(handRechts);
-		setZichtbaar(4);
+		setZichtbaar(minimumZichtbaar);
 	}
 	
 	public int getAantalOnzichtbaar(){
@@ -81,12 +81,12 @@ public class TekeningHangMan extends Tekening{
 			throw new DomainException("foute index: " + index + "/"+getAantalVormen());
 		}
 		if(index > getAantalZichtbaar()){
-			for(int i=aantalZichtbaar+1;i<index;i++){
-				getVorm(i-1).setZichtbaarheid(true);
+			for(int i=aantalZichtbaar;i<index;i++){
+				getVorm(i).setZichtbaarheid(true);
 			}
 		}else{
-			for(int i=aantalZichtbaar+1;i > index;i--){
-				getVorm(i-1).setZichtbaarheid(true);
+			for(int i=aantalZichtbaar-1;i >= index;i--){
+				getVorm(i).setZichtbaarheid(false);
 			}
 		}
 		setAantalZichtbaar(index);

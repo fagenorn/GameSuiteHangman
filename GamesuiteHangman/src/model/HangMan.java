@@ -10,13 +10,22 @@ public class HangMan {
 	private TekeningHangMan tekeningHangMan = new TekeningHangMan("HangMan");
 	private boolean gewonnen;
 	private boolean verloren;
+	private final WoordenLijst lijst;
 
 	public HangMan(Speler speler, WoordenLijst woordenlijst) {
 		if (woordenlijst == null) {
 			throw new DomainException("");
 		}
 		setSpeler(speler);
-		hint = new HintWoord(woordenlijst.getRandomWoord());
+		lijst = woordenlijst;
+		reset();
+	}
+
+	public void reset() {
+		hint = new HintWoord(lijst.getRandomWoord());
+		getTekening().reset();
+		gewonnen = false;
+		verloren = false;
 	}
 
 	public Speler getSpeler() {
@@ -53,7 +62,7 @@ public class HangMan {
 		if (hint.isGeraden()) {
 			gewonnen = true;
 		}
-		if (tekeningHangMan.getAantalZichtbaar() == 14) {
+		if (tekeningHangMan.getAantalZichtbaar() == 18) {
 			verloren = true;
 		}
 	}

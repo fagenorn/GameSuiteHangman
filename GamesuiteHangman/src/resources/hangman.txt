@@ -195,7 +195,7 @@ duur
 duwen
 echt
 een
-één
+ï¿½ï¿½n
 eend
 eenheid
 eenzaam
@@ -652,7 +652,7 @@ presenteren
 prijs
 prins
 prinses
-privé
+privï¿½
 proberen
 probleem
 product
@@ -815,7 +815,7 @@ uitleggen
 uitnodigen
 uitvinden
 uitzoeken
-uur,
+uur
 vaak
 vaarwel
 vader
@@ -963,7 +963,7 @@ wolk
 wonder
 woord
 woud
-wreed,
+wreed
 zaak
 zacht
 zak
@@ -1009,3 +1009,4 @@ zwaar
 zwak
 zwembad
 zwemmen
+een grote appel

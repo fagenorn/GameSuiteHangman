@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import model.WoordenLijst;
+
 public class HangmanTest {
 	
 	private HangMan hangman;

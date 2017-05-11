@@ -89,6 +89,7 @@ public class HangmanPaneel extends JPanel {
 			System.out.println(text);
 			spel.reset();
 			tekenVenster.repaint();
+			woord.setText(getSpel().getHint());
 		} else {
 			System.exit(0);
 		}

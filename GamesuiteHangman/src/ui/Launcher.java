@@ -1,6 +1,7 @@
 package ui;
 
 import java.io.File;
+import java.net.URL;
 
 import javax.swing.JOptionPane;
 
@@ -13,7 +14,9 @@ public class Launcher {
 	public static void main(String[] args) {
 		String naam = JOptionPane.showInputDialog("Welkom! \nHoe heet je?");
 		Speler speler = new Speler(naam);
-		WoordenLezer lezer = new WoordenLezer("hangman.txt");
+		
+		URL keyFileURL = Launcher.class.getClassLoader().getResource("resources/hangman.txt");
+		WoordenLezer lezer = new WoordenLezer(new File(keyFileURL.getPath()));
 		WoordenLijst lijst = lezer.lees();
 
 		String[] choices = { "Pictionary", "HangMan" };

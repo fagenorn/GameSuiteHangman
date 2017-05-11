@@ -815,7 +815,7 @@ uitleggen
 uitnodigen
 uitvinden
 uitzoeken
-uur,
+uur
 vaak
 vaarwel
 vader
@@ -963,7 +963,7 @@ wolk
 wonder
 woord
 woud
-wreed,
+wreed
 zaak
 zacht
 zak

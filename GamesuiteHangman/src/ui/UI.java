@@ -4,10 +4,12 @@ import javax.swing.JOptionPane;
 
 import domain.Speler;
 import model.Cirkel;
+import model.Driehoek;
 import model.LijnStuk;
 import model.Punt;
 import model.Rechthoek;
 import model.Tekening;
+import model.Vorm;
 
 public class UI {
 	
@@ -39,7 +41,7 @@ public class UI {
 				}else if (keuze.equals("Lijnstuk")){
 					tekening.voegToe(lijnstuk(punt(),punt()));
 				}else if (keuze.equals("Driehoek")){
-					tekening.voegToe(lijnstuk(punt(),punt()));
+					tekening.voegToe(driehoek(punt(),punt(),punt()));
 				}
 				break;
 			case 2:
@@ -60,6 +62,12 @@ public class UI {
 		
 		
 	}
+
+	private Vorm driehoek(Punt punt, Punt punt2, Punt punt3) {
+		return new Driehoek(punt, punt2, punt3);
+	}
+
+
 
 	private LijnStuk lijnstuk(Punt beginPunt, Punt eindPunt) {
 		while(true){

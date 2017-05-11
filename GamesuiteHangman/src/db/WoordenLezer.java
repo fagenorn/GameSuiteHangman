@@ -13,15 +13,12 @@ import model.WoordenLijst;
 public class WoordenLezer {
 	private File file;
 	
-	public WoordenLezer(String bestandsnaam){
-		setBestandsNaam(bestandsnaam);
+	public WoordenLezer(File file){
+		setBestandsNaam(file);
 	}
 	
-	private void setBestandsNaam(String bestandsnaam) {
-		if(bestandsnaam == null || bestandsnaam.trim().isEmpty() /*|| bestandsnaam.substring(bestandsnaam.length()-5, bestandsnaam.length()-1) != ".txt"*/){
-			throw new DbException("");
-		}
-		this.file = new File(bestandsnaam);
+	private void setBestandsNaam(File file) {
+		this.file = file;
 	}
 
 	public WoordenLijst lees(){

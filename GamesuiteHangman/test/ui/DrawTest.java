@@ -18,14 +18,14 @@ import model.Vorm;
 
 public class DrawTest {
 
-	
+	@Test
 	public void test() throws InterruptedException, UIException {
 		Speler speler = new Speler("Mark");
 		Tekening tekening = new Tekening(speler.getNaam());
 		Punt begin =  new Punt(1,1);
 		Punt eind = new Punt(399,399);
 		tekening.voegToe(new LijnStuk(begin, eind));
-		
+		tekening.getVormen().forEach((v)->v.setZichtbaarheid(true));
 		GameMainWindow view = new GameMainWindow(speler.getNaam(), tekening);
 		view.setVisible(true);
 		view.teken();
@@ -33,7 +33,8 @@ public class DrawTest {
 		TimeUnit.SECONDS.sleep(5);
 		}
 	
-	
+
+	@Test
 	public void tekenRechthoek() throws InterruptedException, UIException{
 		Punt linkerBovenhoek = new Punt(200, 200);
 		Speler speler = new Speler("Mark");
@@ -43,7 +44,8 @@ public class DrawTest {
 		Rechthoek rechthoek = new Rechthoek(linkerBovenhoek,breedte, hoogte);
 		
 		tekening.voegToe(rechthoek);
-		
+
+		tekening.getVormen().forEach((v)->v.setZichtbaarheid(true));
 		GameMainWindow view = new GameMainWindow(speler.getNaam(), tekening);
 		view.setVisible(true);
 		view.teken();
@@ -75,7 +77,8 @@ public class DrawTest {
 		Speler speler = new Speler("Mark");
 		Tekening tekening = new Tekening(speler.getNaam());
 		tekening.voegToe(driehoek);
-		
+
+		tekening.getVormen().forEach((v)->v.setZichtbaarheid(true));
 		GameMainWindow view = new GameMainWindow(speler.getNaam(), tekening);
 		view.setVisible(true);
 		view.teken();
@@ -83,8 +86,7 @@ public class DrawTest {
 		TimeUnit.SECONDS.sleep(5);
 	}
 	
-	
-	
+	@Test
 	public void hangman() throws InterruptedException, UIException{
 		Punt punt = new Punt(200,200);
 		TekeningHangMan tekening = new TekeningHangMan("Hangman");

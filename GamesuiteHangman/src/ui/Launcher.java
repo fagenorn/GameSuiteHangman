@@ -15,8 +15,6 @@ public class Launcher {
 		Speler speler = new Speler(naam);
 		WoordenLezer lezer = new WoordenLezer("hangman.txt");
 		WoordenLijst lijst = lezer.lees();
-		
-		
 
 		String[] choices = { "Pictionary", "HangMan" };
 		String choice = (String) JOptionPane.showInputDialog(null, "Welke spel wil je spelen?",

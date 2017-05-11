@@ -10,7 +10,6 @@ public class Cirkel extends Vorm {
 	public Cirkel(Punt punt, int i) {
 		setRadius(i);
 		setMiddelpunt(punt);
-		
 	}
 	public int getRadius() {
 		return radius;
@@ -52,8 +51,9 @@ public class Cirkel extends Vorm {
 	}
 	@Override
 	public void teken(Graphics g) {
-		g.drawOval(getMiddelpunt().getX()-getRadius(), getMiddelpunt().getY()-getRadius(), 2*getRadius(), 2*getRadius());
-		
+		if(isZichtbaar()){
+			g.drawOval(getMiddelpunt().getX()-getRadius(), getMiddelpunt().getY()-getRadius(), 2*getRadius(), 2*getRadius());
+		}
 	}
 	
 	

@@ -69,8 +69,9 @@ public class Rechthoek extends Vorm{
 
 	@Override
 	public void teken(Graphics g) {
-
-		g.drawRect(getLinkerBovenhoek().getX(),getLinkerBovenhoek().getY(), getBreedte(), getHoogte());	
+		if(isZichtbaar()){
+			g.drawRect(getLinkerBovenhoek().getX(),getLinkerBovenhoek().getY(), getBreedte(), getHoogte());	
+		}
 	}
 
 }

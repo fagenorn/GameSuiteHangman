@@ -32,4 +32,16 @@ Zijn	abstracte	classes	en	interfaces	juist	gebruikt?
 Ja.
 
 is	alle	functionaliteit	uit de	stories	geïmplementeerd?
-Ja.
+Ja
+
+----------------------------
+code review 2
+
+Toont Eclipse ergens warnings of errors?
+Geen belangrijke.
+
+Compileert de code?
+Ja
+
+Kan de code gerund worden?
+Ja

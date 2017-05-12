@@ -24,17 +24,22 @@ Ja
 
 Kan de code gerund worden?
 Ja
-
-Is git correct gebruikt
+------------------------
+Code Review 5
 
 Is er een .gitignore file?
-Ja
+Ja deze is toegevoegd.
+
 Is er op de juiste momenten / genoeg gecommit?
-Ja
+Ja, bij elke belangrijke aanpassing werd er gecommit zodat iedereen op de hoogte was van de veranderingen en om code verlies te voorkomen.
+
 Zijn merge conflicts goed opgelost?
-Ja
+Deze werden zo veel mogelijk vermeden door niet teveel op dezelfde onderdelen te werken. De merge conflicts die toch gebeurden werden opgelost zonder codeverlies.
+
 Zijn de commit-boodschappen duidelijk?
-Meestal is dit in orde maar soms kan het minder duidelijk zijn.
-Is er aan pair-programming gedaan?
-Ja
+De meeste commit-boodschappen zijn duidelijk, af en toe is er wel een onduidelijke tussen.
+
+Is er aan pair-programming gedaan? 
+Ja, over het algemeen  werd er veel aan pair-programming gedaan.
+
 

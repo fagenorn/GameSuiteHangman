@@ -1,5 +1,5 @@
 Toont Eclipse	ergens warnings of errors?
-Ja, enkel warnings: Unused en serial
+Nee
 
 Compileert de code?
 Ja

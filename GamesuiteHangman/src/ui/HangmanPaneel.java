@@ -61,11 +61,11 @@ public class HangmanPaneel extends JPanel {
 				getTekenVenster().teken();
 
 				if (spel.isGewonnen()) {
-					int text =  JOptionPane.showConfirmDialog(null, "Geonnen!\nNog eens? (y/n)");
+					int text =  JOptionPane.showConfirmDialog(null, "Gewonnen!\nNog eens?");
 					shouldExit(text);
 
 				} else if (spel.isGameOver()) {
-					int text = JOptionPane.showConfirmDialog(null, "Verloren!\nNog eens? (y/n)");
+					int text = JOptionPane.showConfirmDialog(null, "Verloren!\nNog eens?");
 					shouldExit(text);
 				}
 			}

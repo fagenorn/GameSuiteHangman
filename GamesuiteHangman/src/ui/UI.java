@@ -2,6 +2,7 @@ package ui;
 
 import javax.swing.JOptionPane;
 
+import domain.DomainException;
 import domain.Speler;
 import model.Cirkel;
 import model.Driehoek;
@@ -14,7 +15,7 @@ import model.Vorm;
 public class UI {
 	
 	private final Speler speler;
-	private Tekening tekening;
+	private Tekening tekening = null;
 	
 	public UI(Speler s){
 		speler = s;
@@ -23,15 +24,41 @@ public class UI {
 	
 	
 	public void load(){
-		tekening = new Tekening(JOptionPane.showInputDialog("Geef de naam van je tekening:"));
-		int option = 1;
-		while (option != 0){
-			option = Integer.parseInt(JOptionPane.showInputDialog(null, "Wat wil je doen:\n\n1.Vorm maken\n2.Tekening tonen\n\n0.Stoppen"));
+		while (tekening == null){
+			String naam = JOptionPane.showInputDialog("Geef de naam van je tekening:");
+			if (naam == null){
+				System.exit(0);
+			}
+			try {
+				tekening = new Tekening(naam);
+			}
+			catch (DomainException e){
+				JOptionPane.showMessageDialog(null, e.getMessage());
+			}
+		}
 		
+		int option = 5;
+		String input = "";
+		while (option != 0){
+			input = (JOptionPane.showInputDialog(null, "Wat wil je doen:\n\n1.Vorm maken\n2.Tekening tonen\n\n0.Stoppen"));
+			if (input == null){
+				System.exit(0);
+			}
+			try {
+				option = Integer.parseInt(input);
+			}
+			catch (NumberFormatException e){
+				JOptionPane.showMessageDialog(null, "Geen geldig getal");
+			}
+			
+			
 			switch (option){
 			case 1:	
 				String[] shapes = {"Cirkel", "Rechthoek", "Lijnstuk","Driehoek"};
 				Object keuze = JOptionPane.showInputDialog(null, "Wat wilt u tekenen?", "Input", JOptionPane.INFORMATION_MESSAGE, null, shapes, null);
+				if (keuze == null){
+					System.exit(0);
+				}
 				if (keuze.equals("Cirkel")){
 					tekening.voegToe(cirkel(punt()));
 			

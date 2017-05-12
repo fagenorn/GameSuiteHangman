@@ -83,6 +83,22 @@ Ja.
 is	alle	functionaliteit	uit de	stories	geïmplementeerd?
 Ja
 
+Codereview5
+Is er een .gitignore file?
+Ja deze is toegevoegd.
+
+Is er op de juiste momenten / genoeg gecommit?
+Ja, als er een grote aanpassing was werd deze gecommit.
+
+Zijn merge conflicts goed opgelost?
+De merge conflicts die voorkwamen waren goed opgelost.
+
+Zijn de commit-boodschappen duidelijk?
+Een groot aantal commits hebben geen boodschap.
+
+Is er aan pair-programming gedaan? 
+Ja, er werd hier aan gedaan.
+
 ----------------------------
 code review 2
 

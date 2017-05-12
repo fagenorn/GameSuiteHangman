@@ -31,7 +31,6 @@ public class Launcher {
 				scherm = new HangManHoofdScherm(spel, new HangmanPaneel(spel));
 				scherm.start();
 			} catch (UIException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			break;

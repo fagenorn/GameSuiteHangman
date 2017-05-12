@@ -58,6 +58,7 @@ public class UI {
 				break;
 			}
 		}
+		System.exit(0);
 		
 		
 	}

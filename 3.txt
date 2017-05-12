@@ -18,3 +18,18 @@ Er wordt gezecht dat file niet ingelezen kan worden in Console. Als geannuleerd 
 Wat gebeurt er als er een fout optreedt? Crasht het spel? Of kan je doorspelen?
 Spel kan niet gespeeld worden... Crash al in het begin.
 Pictionary crasht ook bij ongeldige nummers.
+________________
+Is	de	UML	juist	geïmplementeerd?
+Ja.
+
+Is	de	juiste	structuur	gebruikt?
+Ja.
+
+Staan	de	juiste	classes	in	de	juiste	packages?
+Er is geen model package.
+
+Zijn	abstracte	classes	en	interfaces	juist	gebruikt?
+Ja.
+
+is	alle	functionaliteit	uit de	stories	geïmplementeerd?
+Ja.

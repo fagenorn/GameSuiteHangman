@@ -1,3 +1,52 @@
+
+=================================================================
+
+Code review 3
+-------------
+Is de code goed geformatteerd / consistent / leesbaar? 
+Ja
+
+Worden == en .equals juist gebruikt? 
+Ja
+
+Is de whitespace consistent? 
+Ja
+
+Worden alle haakjes op de juiste manier geplaatst? 
+Ja
+
+Is de code goed gestructureerd? 
+Ja
+
+Is de code makkelijk leesbaar? 
+Meestal
+
+Is de code onnodig ingewikkeld? Kan het simpeler? 
+Nee
+
+Wordt er code herhaald? 
+Nee
+
+Zijn de classes niet te lang en overzichtelijk? 
+Ja
+
+Zijn de namen van alle variabelen duidelijk? 
+Ja
+
+Worden public/private/protected, static en final juist gebruikt? 
+Ja
+
+Zijn gelijkaardige methodes (b.v. equals() en toString()) op dezelfde manier geïmplementeerd? 
+Ja
+
+Zijn er variabelen, methodes of classes die nergens gebruikt worden? 
+Nee
+
+Staat er code in comments?	
+Nee
+
+Staan er todo’s in comments?
+Nee
 =================================================================
 
 Code review 4

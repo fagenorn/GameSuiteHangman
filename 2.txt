@@ -1,7 +1,7 @@
 Coveren de testklassen genoeg code, en passen ze allemaal?
 
 Wordt elke methode van elke classes getest?
-Grootste delen van de classes worden getest. Sominge classes. (zoals DomainException en somige UI classes.) Van de classes die getest worden, wordt wel elke methode getest.
+Grootste delen van de classes worden getest. Sominge classes niet, zoals DomainException en somige UI classes. Van de classes die getest worden, wordt wel elke methode getest.
 
 Worden ook waarden op de limieten en buiten de limieten getest?
 Rand voorwaarden worden goed getest in de test classes.
@@ -24,22 +24,25 @@ Ja
 
 Kan de code gerund worden?
 Ja
-
-Is git correct gebruikt
+------------------------
+Code Review 5
 
 Is er een .gitignore file?
-Ja
+
+Ja deze is toegevoegd.
 
 Is er op de juiste momenten / genoeg gecommit?
-Ja
+Ja, bij elke belangrijke aanpassing werd er gecommit zodat iedereen op de hoogte was van de veranderingen en om code verlies te voorkomen.
 
 Zijn merge conflicts goed opgelost?
-Ja
+Deze werden zo veel mogelijk vermeden door niet teveel op dezelfde onderdelen te werken. De merge conflicts die toch gebeurden werden opgelost zonder codeverlies.
 
 Zijn de commit-boodschappen duidelijk?
-Meestal is dit in orde maar soms kan het minder duidelijk zijn.
-Is er aan pair-programming gedaan?
-Ja
+De meeste commit-boodschappen zijn duidelijk, af en toe is er wel een onduidelijke tussen.
+
+Is er aan pair-programming gedaan? 
+Ja, over het algemeen  werd er veel aan pair-programming gedaan.
+
 
 Is de code goed geformatteerd / consistent / leesbaar? 
 Ja

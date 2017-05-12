@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import model.HintLetter;
 import model.HintWoord;
 
 public class HintWoordTest {

@@ -1,0 +1,40 @@
+Coveren de testklassen genoeg code, en passen ze allemaal?
+
+Wordt elke methode van elke classes getest?
+Grootste delen van de classes worden getest. Sominge classes. (zoals DomainException en somige UI classes.) Van de classes die getest worden, wordt wel elke methode getest.
+
+Worden ook waarden op de limieten en buiten de limieten getest?
+Rand voorwaarden worden goed getest in de test classes.
+
+Wordt het doorgeven van null getest?
+Het doorgeven van null als parameter wordt getest waar toepasbaar.
+
+Wordt er voor Exceptions getest?
+Er wordt goed getest op Exceptions.
+
+Worden er DomainExceptions, UiExceptions en DbException gebruikt?
+Custom Exceptions worden goed gebruikt waar nodig.
+
+Toont Eclipse	ergens warnings of errors?
+Nee
+
+Compileert de code?
+Ja
+
+
+Kan de code gerund worden?
+Ja
+
+Is git correct gebruikt
+
+Is er een .gitignore file?
+Ja
+Is er op de juiste momenten / genoeg gecommit?
+Ja
+Zijn merge conflicts goed opgelost?
+Ja
+Zijn de commit-boodschappen duidelijk?
+Meestal is dit in orde maar soms kan het minder duidelijk zijn.
+Is er aan pair-programming gedaan?
+Ja
+

@@ -50,6 +50,7 @@ public class WoordenLijstTest {
 	@Test
 	public void RandomTest_lijst_heeft_meerdere_waardes_geeft_random_terug_no_Exception(){
 		WoordenLijst woorden = new WoordenLijst();
+		@SuppressWarnings("unused")
 		String Randomness = "";
 		woorden.voegToe("patat0");
 		woorden.voegToe("patat1");

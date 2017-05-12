@@ -1,7 +1,7 @@
 Coveren de testklassen genoeg code, en passen ze allemaal?
 
 Wordt elke methode van elke classes getest?
-Grootste delen van de classes worden getest. Sominge classes. (zoals DomainException en somige UI classes.) Van de classes die getest worden, wordt wel elke methode getest.
+Grootste delen van de classes worden getest. Sominge classes niet, zoals DomainException en somige UI classes. Van de classes die getest worden, wordt wel elke methode getest.
 
 Worden ook waarden op de limieten en buiten de limieten getest?
 Rand voorwaarden worden goed getest in de test classes.

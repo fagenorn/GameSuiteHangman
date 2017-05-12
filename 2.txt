@@ -1,3 +1,20 @@
+Coveren de testklassen genoeg code, en passen ze allemaal?
+
+Wordt elke methode van elke classes getest?
+Grootste delen van de classes worden getest. Sominge classes niet, zoals DomainException en somige UI classes. Van de classes die getest worden, wordt wel elke methode getest.
+
+Worden ook waarden op de limieten en buiten de limieten getest?
+Rand voorwaarden worden goed getest in de test classes.
+
+Wordt het doorgeven van null getest?
+Het doorgeven van null als parameter wordt getest waar toepasbaar.
+
+Wordt er voor Exceptions getest?
+Er wordt goed getest op Exceptions.
+
+Worden er DomainExceptions, UiExceptions en DbException gebruikt?
+Custom Exceptions worden goed gebruikt waar nodig.
+
 Toont Eclipse	ergens warnings of errors?
 Nee
 
@@ -7,3 +24,66 @@ Ja
 
 Kan de code gerund worden?
 Ja
+------------------------
+Code Review 5
+
+Is er een .gitignore file?
+
+Ja deze is toegevoegd.
+
+Is er op de juiste momenten / genoeg gecommit?
+Ja, bij elke belangrijke aanpassing werd er gecommit zodat iedereen op de hoogte was van de veranderingen en om code verlies te voorkomen.
+
+Zijn merge conflicts goed opgelost?
+Deze werden zo veel mogelijk vermeden door niet teveel op dezelfde onderdelen te werken. De merge conflicts die toch gebeurden werden opgelost zonder codeverlies.
+
+Zijn de commit-boodschappen duidelijk?
+De meeste commit-boodschappen zijn duidelijk, af en toe is er wel een onduidelijke tussen.
+
+Is er aan pair-programming gedaan? 
+Ja, over het algemeen  werd er veel aan pair-programming gedaan.
+
+
+Is de code goed geformatteerd / consistent / leesbaar? 
+Ja
+Worden == en .equals juist gebruikt? 
+Ja
+
+Is de whitespace consistent? 
+Vrij, consisiten genoeg om probleemloos te lezen. Soms geen spatie voor een accolade en 	soms wel.
+Worden alle haakjes op de juiste manier geplaatst? 
+Ja
+
+Is de code goed gestructureerd? 
+Ja
+
+Is de code makkelijk leesbaar? 
+Ja
+
+Is de code onnodig ingewikkeld? Kan het simpeler? 
+Nee
+
+Wordt er code herhaald? 
+Nee
+
+Zijn de classes niet te lang en overzichtelijk? 
+Ja
+
+Zijn de namen van alle variabelen duidelijk? 
+Ja
+
+Worden public/private/protected, static en final juist gebruikt? 
+Ja
+
+Zijn gelijkaardige methodes (b.v. equals() en toString()) op dezelfde manier geïmplementeerd? 
+Ja
+
+Zijn er variabelen, methodes of classes die nergens gebruikt worden? 
+Nee
+
+Staat er code in comments?	
+Nee
+
+Staan er todo’s in comments?
+Nee
+

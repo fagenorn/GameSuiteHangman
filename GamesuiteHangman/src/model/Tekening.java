@@ -23,7 +23,7 @@ public class Tekening {
 
 	private void setNaam(String naam) {
 		if (naam == null || naam.trim().isEmpty()) {
-			throw new DomainException("");
+			throw new DomainException("Vul een naam in!");
 		}
 		this.naam = naam;
 	}

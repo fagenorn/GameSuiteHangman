@@ -51,7 +51,6 @@ public class LijnStuk extends Vorm{
 
 	@Override
 	public Omhullende getOmhullende() {
-		// TODO Auto-generated method stub
 		int x = Math.min(getStartPunt().getX(), getEindPunt().getX());
 		int y = Math.min(getStartPunt().getY(), getEindPunt().getY());
 		return new Omhullende(new Punt(x, y), Math.abs(getStartPunt().getX() - getEindPunt().getX()),Math.abs(getStartPunt().getY() - getEindPunt().getY()));

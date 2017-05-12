@@ -1,7 +1,5 @@
 package model;
 
-import domain.DomainException;
-
 public class HintLetter {
 
 	private boolean geraden;

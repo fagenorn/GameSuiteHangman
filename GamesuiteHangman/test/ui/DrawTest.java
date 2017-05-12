@@ -1,7 +1,5 @@
 package ui;
 
-import static org.junit.Assert.*;
-
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Test;
@@ -14,7 +12,6 @@ import model.Punt;
 import model.Rechthoek;
 import model.Tekening;
 import model.TekeningHangMan;
-import model.Vorm;
 
 public class DrawTest {
 
@@ -88,7 +85,6 @@ public class DrawTest {
 	
 	@Test
 	public void hangman() throws InterruptedException, UIException{
-		Punt punt = new Punt(200,200);
 		TekeningHangMan tekening = new TekeningHangMan("Hangman");
 		
 		GameMainWindow view = new GameMainWindow("Lol", tekening);

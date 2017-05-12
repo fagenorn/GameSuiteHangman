@@ -1,0 +1,9 @@
+Toont Eclipse	ergens warnings of errors?
+Ja, enkel warnings: Unused en serial
+
+Compileert de code?
+Ja
+
+
+Kan de code gerund worden?
+Ja

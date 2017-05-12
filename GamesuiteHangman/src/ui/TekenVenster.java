@@ -4,8 +4,6 @@ import java.awt.Canvas;
 import java.awt.Dimension;
 import java.awt.Graphics;
 
-import javax.swing.JPanel;
-
 import model.Tekening;
 import model.Vorm;
 

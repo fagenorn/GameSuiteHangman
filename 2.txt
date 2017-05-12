@@ -1,4 +1,6 @@
-﻿Coveren de testklassen genoeg code, en passen ze allemaal?
+﻿Code Review 1
+
+Coveren de testklassen genoeg code, en passen ze allemaal?
 
 Wordt elke methode van elke classes getest?
 Grootste delen van de classes worden getest. Sominge classes niet, zoals DomainException en somige UI classes. Van de classes die getest worden, wordt wel elke methode getest.
@@ -15,54 +17,24 @@ Er wordt goed getest op Exceptions.
 Worden er DomainExceptions, UiExceptions en DbException gebruikt?
 Custom Exceptions worden goed gebruikt waar nodig.
 
+------------------------
+Code Review 2
+
 Toont Eclipse	ergens warnings of errors?
 Nee
 
 Compileert de code?
 Ja
 
------------------------- 
 Kan de code gerund worden?
 Ja
-Code Review 4 
-Crasht  het  spel  als  er  ongeldige  waarden  ingegeven  worden? 
-Neen. 
- 
-Crasht  het  spel  als  een  dialog  geannuleerd  wordt? 
-Neen. 
- 
-Kan je makkelijk stoppen /resetten? 
-Stoppen gaat zeer makkelijk, juist als je bij Pictionary een punt moet aanmaken blijft hij vragen tot je een geldig punt hebt. 
- 
-Zijn  de  foutboodschappen  duidelijk? 
-Ze geven weer welke waarde er opnieuw ingegeven moet worden dus ja. 
- 
-Wat  gebeurt  er  als  er  een  fout  optreedt?  Crasht  het  spel?  Of  kan  je  doorspelen? 
-Er kunnen geen fouten meer optreden, alles wordt opgevangen in bijvoorbeeld een loop die de waarde opnieuw vraagt als het een onverwachte waarde is. 
- 
 
-------------------------
-Code Review 5
-
-Is er een .gitignore file?
-
-Ja deze is toegevoegd.
-
-Is er op de juiste momenten / genoeg gecommit?
-Ja, bij elke belangrijke aanpassing werd er gecommit zodat iedereen op de hoogte was van de veranderingen en om code verlies te voorkomen.
-
-Zijn merge conflicts goed opgelost?
-Deze werden zo veel mogelijk vermeden door niet teveel op dezelfde onderdelen te werken. De merge conflicts die toch gebeurden werden opgelost zonder codeverlies.
-
-Zijn de commit-boodschappen duidelijk?
-De meeste commit-boodschappen zijn duidelijk, af en toe is er wel een onduidelijke tussen.
-
-Is er aan pair-programming gedaan? 
-Ja, over het algemeen  werd er veel aan pair-programming gedaan.
-
+------------------------ 
+Code Review 3
 
 Is de code goed geformatteerd / consistent / leesbaar? 
 Ja
+
 Worden == en .equals juist gebruikt? 
 Ja
 
@@ -104,6 +76,46 @@ Nee
 Staan er todo’s in comments?
 Nee
 
+------------------------
+Code Review 4 
+
+Crasht  het  spel  als  er  ongeldige  waarden  ingegeven  worden? 
+Neen. 
+ 
+Crasht  het  spel  als  een  dialog  geannuleerd  wordt? 
+Neen. 
+ 
+Kan je makkelijk stoppen /resetten? 
+Stoppen gaat zeer makkelijk, juist als je bij Pictionary een punt moet aanmaken blijft hij vragen tot je een geldig punt hebt. 
+ 
+Zijn  de  foutboodschappen  duidelijk? 
+Ze geven weer welke waarde er opnieuw ingegeven moet worden dus ja. 
+ 
+Wat  gebeurt  er  als  er  een  fout  optreedt?  Crasht  het  spel?  Of  kan  je  doorspelen? 
+Er kunnen geen fouten meer optreden, alles wordt opgevangen in bijvoorbeeld een loop die de waarde opnieuw vraagt als het een onverwachte waarde is. 
+
+------------------------
+Code Review 5
+
+Is er een .gitignore file?
+
+Ja deze is toegevoegd.
+
+Is er op de juiste momenten / genoeg gecommit?
+Ja, bij elke belangrijke aanpassing werd er gecommit zodat iedereen op de hoogte was van de veranderingen en om code verlies te voorkomen.
+
+Zijn merge conflicts goed opgelost?
+Deze werden zo veel mogelijk vermeden door niet teveel op dezelfde onderdelen te werken. De merge conflicts die toch gebeurden werden opgelost zonder codeverlies.
+
+Zijn de commit-boodschappen duidelijk?
+De meeste commit-boodschappen zijn duidelijk, af en toe is er wel een onduidelijke tussen.
+
+Is er aan pair-programming gedaan? 
+Ja, over het algemeen  werd er veel aan pair-programming gedaan.
+
+------------------------
+Code Review 6
+
 Is de UML juist geïmplementeerd?
 Ja
 
@@ -112,6 +124,7 @@ Ja
 
 Staan de juiste	classes	in de juiste packages?
 Ja
+
 Zijn abstracte	classes	en interfaces juist gebruikt?
 Ja
 

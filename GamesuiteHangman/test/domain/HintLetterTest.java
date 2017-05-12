@@ -12,6 +12,7 @@ public class HintLetterTest {
 
 	@Test
 	public void letter_aanmaken_die_spatie_is_gooit_geen_exception() {
+		@SuppressWarnings("unused")
 		HintLetter letter = new HintLetter(' ');
 	}
 

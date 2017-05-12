@@ -2,7 +2,6 @@ package ui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.HeadlessException;
 
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
@@ -12,8 +11,6 @@ import model.Tekening;
 
 public class GameMainWindow extends JFrame {
 	private static final long serialVersionUID = 1L;
-	
-	private String naam;
 	private TekenVenster tekenvenster;
 	
 	

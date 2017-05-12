@@ -1,4 +1,4 @@
-﻿overerving
+overerving
 statisch type
 dynamisch type
 try catch finally

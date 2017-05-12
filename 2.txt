@@ -1,4 +1,4 @@
-Coveren de testklassen genoeg code, en passen ze allemaal?
+﻿Coveren de testklassen genoeg code, en passen ze allemaal?
 
 Wordt elke methode van elke classes getest?
 Grootste delen van de classes worden getest. Sominge classes niet, zoals DomainException en somige UI classes. Van de classes die getest worden, wordt wel elke methode getest.
@@ -87,3 +87,16 @@ Nee
 Staan er todo’s in comments?
 Nee
 
+Is de UML juist geïmplementeerd?
+Ja
+Is de juiste structuur gebruikt?
+Ja
+
+Staan de juiste	classes	in de juiste packages?
+Ja
+
+Zijn abstracte	classes	en interfaces juist gebruikt?
+Ja
+
+Is alle	functionaliteit	uit de stories geïmplementeerd?
+Ja

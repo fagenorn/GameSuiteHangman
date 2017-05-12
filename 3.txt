@@ -1,0 +1,20 @@
+=================================================================
+
+Code review 4
+-------------
+
+Crasht het spel als er ongeldige waarden ingegeven worden?
+Ja
+
+Crasht het spel als een dialog geannuleerd wordt?
+Ja
+
+Kan je makkelijk stoppen / resetten?
+Applicatie laad nied. (FIle wordt niet ingelezen)
+
+Zijn de foutboodschappen duidelijk?
+Er wordt gezecht dat file niet ingelezen kan worden in Console. Als geannuleerd wordt, gooit applicatie NullPointer.
+
+Wat gebeurt er als er een fout optreedt? Crasht het spel? Of kan je doorspelen?
+Spel kan niet gespeeld worden... Crash al in het begin.
+Pictionary crasht ook bij ongeldige nummers.

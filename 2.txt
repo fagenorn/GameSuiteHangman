@@ -7,3 +7,17 @@ Ja
 
 Kan de code gerund worden?
 Ja
+
+Is git correct gebruikt
+
+Is er een .gitignore file?
+Ja
+Is er op de juiste momenten / genoeg gecommit?
+Ja
+Zijn merge conflicts goed opgelost?
+Ja
+Zijn de commit-boodschappen duidelijk?
+Meestal is dit in orde maar soms kan het minder duidelijk zijn.
+Is er aan pair-programming gedaan?
+Ja
+

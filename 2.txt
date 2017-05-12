@@ -29,12 +29,58 @@ Is git correct gebruikt
 
 Is er een .gitignore file?
 Ja
+
 Is er op de juiste momenten / genoeg gecommit?
 Ja
+
 Zijn merge conflicts goed opgelost?
 Ja
+
 Zijn de commit-boodschappen duidelijk?
 Meestal is dit in orde maar soms kan het minder duidelijk zijn.
 Is er aan pair-programming gedaan?
 Ja
+
+Is de code goed geformatteerd / consistent / leesbaar? 
+Ja
+Worden == en .equals juist gebruikt? 
+Ja
+
+Is de whitespace consistent? 
+Vrij, consisiten genoeg om probleemloos te lezen. Soms geen spatie voor een accolade en 	soms wel.
+Worden alle haakjes op de juiste manier geplaatst? 
+Ja
+
+Is de code goed gestructureerd? 
+Ja
+
+Is de code makkelijk leesbaar? 
+Ja
+
+Is de code onnodig ingewikkeld? Kan het simpeler? 
+Nee
+
+Wordt er code herhaald? 
+Nee
+
+Zijn de classes niet te lang en overzichtelijk? 
+Ja
+
+Zijn de namen van alle variabelen duidelijk? 
+Ja
+
+Worden public/private/protected, static en final juist gebruikt? 
+Ja
+
+Zijn gelijkaardige methodes (b.v. equals() en toString()) op dezelfde manier geïmplementeerd? 
+Ja
+
+Zijn er variabelen, methodes of classes die nergens gebruikt worden? 
+Nee
+
+Staat er code in comments?	
+Nee
+
+Staan er todo’s in comments?
+Nee
 

@@ -25,6 +25,23 @@ Ja
 Kan de code gerund worden?
 Ja
 ------------------------
+Code Review 4
+Crasht	het	spel	als	er	ongeldige	waarden	ingegeven	worden?
+Neen.
+
+Crasht	het	spel	als	een	dialog	geannuleerd	wordt?
+Neen.
+
+Kan je makkelijk stoppen /resetten?
+Stoppen gaat zeer makkelijk, juist als je bij Pictionary een punt moet aanmaken blijft hij vragen tot je een geldig punt hebt.
+
+Zijn	de	foutboodschappen	duidelijk?
+Ze geven weer welke waarde er opnieuw ingegeven moet worden dus ja.
+
+Wat	gebeurt	er	als	er	een	fout	optreedt?	Crasht	het	spel?	Of	kan	je	doorspelen?
+Er kunnen geen fouten meer optreden, alles wordt opgevangen in bijvoorbeeld een loop die de waarde opnieuw vraagt als het een onverwachte waarde is.
+
+------------------------
 Code Review 5
 
 Is er een .gitignore file?
